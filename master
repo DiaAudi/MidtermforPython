@@ -28,10 +28,6 @@ for i in origin_data[1:]:
         #print(z)#
         total += int(z)
         subject[score.index(z)-1] += int(z)
-
-        '''if int(z) < 60:
-            fail.append(score.index(z))
-        '''
     name = score[0]
     #print(name)
 
