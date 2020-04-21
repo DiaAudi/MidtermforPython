@@ -28,6 +28,10 @@ for i in origin_data[1:]:
         #print(z)#
         total += int(z)
         subject[score.index(z)-1] += int(z)
+
+        '''if int(z) < 60:
+            fail.append(score.index(z))
+        '''
     name = score[0]
     #print(name)
 
@@ -54,8 +58,11 @@ for i in origin_data[1:]:
 for j in range (9):
     avg_sub[j] = str(round(subject[j]/num,2))
 #print(avg_sub)
-avg_total = round(total_/9/num,2)
-final_rank[1] ='0' +' ' + '平均'+' ' + (' '.join(avg_sub)+ ' ' + str(avg_total)+ '\n')
+avg_total = round(total_/num,2)
+avg_avg = round(avg_total/9,2)
+print(avg_avg)
+print(avg_total)
+final_rank[1] ='0' + ' ' + '平均'+ ' ' + ' '.join(avg_sub) + ' '  + str(avg_total) + ' ' + str(avg_avg)  + '\n'
 
 #print(namefrank)
 #print(stu_rank)
@@ -88,13 +95,6 @@ for r in range (2,num+2):
     final_rank.append(name_[r-2])
 #print(final_rank)
 
-with open('/Users/sjy/Desktop/testfile/result.txt ', 'w') as f:
+with open('/Users/sjy/Desktop/testfile/result.txt', 'w') as f:
     f.writelines(final_rank)
-
-
-
-
-
-
-
 
