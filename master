@@ -54,7 +54,7 @@ for i in origin_data[1:]:
 for j in range (9):
     avg_sub[j] = str(round(subject[j]/num,2))
 #print(avg_sub)
-avg_total = round(total_/9/num,2)
+avg_total = round(total_/num,2)
 final_rank[1] ='0' +' ' + '平均'+' ' + (' '.join(avg_sub)+ ' ' + str(avg_total)+ '\n')
 
 #print(namefrank)
